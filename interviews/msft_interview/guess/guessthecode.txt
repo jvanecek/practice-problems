@@ -1,0 +1,55 @@
+Guess the code | 2 point(s)
+
+The first copy of Windows 1.0 was locked in a safe which you happened to find. In order to open this safe, you need to crack the code. Others have already tried to crack the code and they left you two clues. You need to design a program that will take these clues as input and output the correct code.
+
+Input description/format
+
+Each line of the input contains 2 guesses in the format guess1-guess2, e.g. RRR11-GGG10. The 2 guesses will be separated by a dash: -. It safe to assume that the input will always be in the above format.
+
+Each guess is in the format CCCpc where:
+
+C is a letter of the guessed code.
+p is the number of letters in the guess that were in the correct position.
+c is the number of letters in the guess that were the correct color but the wrong position. 
+C may be one of three colors: red (R), green (G), or blue (B).
+0 ≤ (p + c) ≤ 3
+If p = 1, it indicates you guessed the color as well the position for that color correctly.
+Guessed code
+
+The guessed code consists of three colors (the order of the colors matters).
+
+Position
+
+Position is a number from 0 to 3. 0 indicates no correct positions; 3 indicates all correct positions. 
+If the guess had 2 colors in the right position, the position will be 2.
+
+Color
+
+Color is a number from 0 to 3. 0 indicates no correct colors; 3 indicates all correct colors (but no colors in the correct position). If the guess had 1 color correct, but not in the right position, then the color will be 1.
+
+Examples
+
+For the input line RRB11-GGG10:
+
+the first guess was RRB. 1 color and its position is correct, and 1 more color is correct but its position is incorrect.
+the second guess was GGG. 1 color and its position is correct.
+Output description/format
+
+Your output will have the same number of lines as the input. 
+Each line can be one of 3 possible outputs:
+
+If you can guess the code correctly, you should print it. For example, if the input is RBG10-GBG20, the output should be GGG.
+If there is more than one possible code (meaning the input is insufficient to guess the code), then you should output Download and install updates for your input.
+If there are no possible codes for the given input (meaning the input is incorrect), then you should output Blue Screen: A problem has been detected.
+Example input
+
+RRG10-GRB10
+GRR20-BRB10
+BRR01-BBG12
+BGB20-RBB00
+Example output
+
+GGG
+Download and install updates for your input
+GBB
+Blue Screen: A problem has been detected
